@@ -230,6 +230,8 @@ a:hover {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 25px;
+
+    padding-top: 140px;
 }
 
 .work {
@@ -238,9 +240,7 @@ a:hover {
 }
 
 .work:nth-child(odd){  /*Делаем через postion и nth child красивенький отступ*/
-    position: relative;
-
-    top: 140px;
+    margin-top: -140px;
 }
 
 .work:hover{
@@ -312,3 +312,47 @@ a:hover {
 .work:hover {
     filter: blur(0);
 } */
+
+
+
+/* Projects */
+
+
+.projects {
+    margin-top: 200px;
+}
+
+.container {
+
+}
+
+.projects__title {
+    margin-top: 0;
+
+    margin-bottom: 65px;
+    
+    font-size: 36px;
+    text-align: center;
+    color: #DEDEDE;
+
+}
+
+.project__wrapper {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.projects__img {
+    width: 400px;
+    height: 400px;
+
+    object-fit: cover;
+    object-position: center;
+}
+
+
+.projects--vertical .projects__img {
+    height: 560px;
+}
