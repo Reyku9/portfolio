@@ -88,6 +88,10 @@ a:hover {
     color: #DEDEDE;
 }
 
+ul {
+    padding: 0;
+}
+
 
 /* Header */
 
@@ -360,14 +364,6 @@ a:hover {
     margin-bottom: 50px;
 }
 
-.btn {
-
-}
-
-.contact__btn {
-    
-}
-
 
 
 .footer {
@@ -386,12 +382,17 @@ a:hover {
 
     align-items: baseline;
 
-    padding-top: 50px;
-    padding-bottom: 40px;
+    box-sizing: border-box;
+
+    padding-top: 45px;
+    padding-bottom: 36px;
+
+    height: 140px;
 }
 
 .footer__copy {
     font-size: 16px;
+    margin: 0;
 }
 
 .footer__social {
@@ -405,4 +406,145 @@ a:hover {
 
 .footer img {
     display: flex; /*у картинок есть особенность появляется пространство снизу, задаем display flex и он пропадает*/
+}
+
+
+
+@media (max-width: 1100px) {
+    .welcome__img {
+        padding-right: 0;
+    }
+}
+
+@media (max-width: 950px) {
+    .welcome .container {
+        flex-direction: column-reverse;
+        gap: 60px;
+    }
+
+    .welcome {
+        margin-top: 70px;
+    }
+
+    .welcome__title {
+        width: auto;
+    }
+
+    .welcome__text {
+        width: auto;
+    
+        margin-bottom: 50px;
+    }
+
+    .welcome__desc {
+        text-align: center;
+    }
+
+    .work {
+        height: 600px;
+    }
+
+    .work__name {
+        opacity: 1;
+    }
+}
+
+
+@media (max-width: 850px) {
+    .projects__img {
+        height: 300px;
+        width: 300px;
+    }
+
+    .works, .projects, .contact {
+        margin-top: 100px;
+    }
+}
+
+
+
+@media (max-width: 770px) {
+    .welcome__title {
+        font-size: 36px;
+    }
+}
+
+
+@media(max-width: 700px) {
+    .footer .container {
+        flex-direction: column-reverse;
+        align-items: center;
+        gap: 35px;
+        box-sizing: content-box;
+    
+    }
+}
+
+@media(max-width: 650px) {
+    .projects__img {
+        width: 100%;
+        height: 360px;
+    }
+    .works__wrapper {
+        grid-template-columns: 1fr; /*Теперь только одна колонка в гридах*/
+    
+        padding-top: 0;
+    }
+    .work:nth-child(odd) {
+        margin-top: 0;
+    }
+}
+
+@media (max-width: 500px) {
+    .header__nav {
+        display: none;
+    }
+
+    .welcome__img{
+        width: 240px;
+        height: 240px;
+    }
+
+    .btn {
+        padding: 16px 20px;
+    }
+
+    .works__btn {
+        margin-bottom: 40px;
+    }
+
+    .work__name {
+        font-size: 28px;
+    }
+
+    .title {
+        font-size: 28px;
+    }
+
+    .projects__title {
+        margin-bottom: 35px;
+    }
+
+    .contact__title {
+        margin-bottom: 12px;
+    }
+    
+    .contact .container {
+        max-width: 270px;
+    }
+
+    .contact__text {
+        font-size: 18px;
+    }
+
+    .contact {
+        margin-bottom: 100px;
+    }
+}
+
+
+@media (max-width: 430px) {
+    .welcome__title {
+        font-size: 26px;
+    }
 }
