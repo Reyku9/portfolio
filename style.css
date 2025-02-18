@@ -5,6 +5,10 @@
 
 /* Общие стили */
 
+* {
+    scroll-behavior: smooth;
+}
+
 body {
     margin: 0;
     
@@ -123,6 +127,10 @@ ul {
     font-size: 18px;
 }
 
+
+.burger-menu {
+    display: none;
+}
 
 
 
@@ -496,6 +504,48 @@ ul {
 }
 
 @media (max-width: 500px) {
+    .header {
+        position: relative;
+    }
+
+
+    .burger-menu {
+        display: block;
+        background-color: transparent;
+        padding: 0;
+        border: none;
+
+        position: absolute;
+        top: 29px;
+        right: 15px;
+    }
+
+    .burger-menu__icon {
+        height: 24px;
+        width: 30px;
+
+        object-fit: contain;
+        object-position: center;
+    }
+
+
+    .header--mobile .header__nav {
+        display: flex;
+        align-self: center;
+        flex-wrap: wrap;
+
+        gap: 20px 30px;
+
+        justify-content: center;
+    }
+
+    .header.header--mobile .container {
+        flex-direction: column;
+        align-items: flex-start;
+
+        gap: 10px;
+    }
+    
     .header__nav {
         display: none;
     }
@@ -540,6 +590,8 @@ ul {
     .contact {
         margin-bottom: 100px;
     }
+
+    
 }
 
 
